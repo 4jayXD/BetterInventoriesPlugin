@@ -44,7 +44,7 @@ public class ShulkerBoxManager extends AbstractManager
 
     
     private static void OpenShulker(HumanEntity player, Inventory inventory, ItemStack itemStack) {
-        if (isViewingShulker(player))
+        if (isViewingShulker(player) || isOpen(itemStack))
             return;
         
         getShulkerBox(itemStack, shulkerBox -> {
@@ -71,9 +71,11 @@ public class ShulkerBoxManager extends AbstractManager
         });
     }
     
-    
     private static boolean isShulker(ItemStack itemStack) {
         return itemStack != null && !itemStack.isEmpty() && itemStack.getItemMeta() instanceof BlockStateMeta bsm && bsm.getBlockState() instanceof ShulkerBox;
+    }
+    private static boolean isOpen(ItemStack itemStack) {
+        return itemStack.getPersistentDataContainer().has(instance.ShulkerIDKey);
     }
     private static boolean isViewingShulker(HumanEntity humanEntity) {
         for (ShulkerBoxInfo shulkerBoxInstance : shulkerBoxInstances) {
