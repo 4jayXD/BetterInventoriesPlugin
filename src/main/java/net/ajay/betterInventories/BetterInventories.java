@@ -14,8 +14,4 @@ public final class BetterInventories extends JavaPlugin {
         EChestManager.create(this);
         ShulkerBoxManager.create(this);
     }
-
-    @Override
-    public void onDisable() {
-    }
 }
