@@ -5,7 +5,8 @@ import net.ajay.betterInventories.manager.ShulkerBoxManager;
 import net.ajay.betterInventories.util.OperatorUtils;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class BetterInventories extends JavaPlugin {
+public final class BetterInventories extends JavaPlugin 
+{
 
     @Override
     public void onEnable() {
