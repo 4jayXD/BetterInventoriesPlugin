@@ -1,0 +1,15 @@
+name: BetterInventories
+version: '0.1.a1'
+main: net.ajay.betterInventories.paper.BetterInventories
+api-version: '1.21'
+authors: [ Ajay ]
+
+
+commands: 
+  peek:
+    description: "Spy on people (freak)"
+    permission-message: "Can you see me?"
+    
+  echest:
+    description: "Shortcut for your ender chest."
+    permission-message: "Can you see me?"
